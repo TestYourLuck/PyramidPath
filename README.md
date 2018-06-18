@@ -1,6 +1,6 @@
 # PyramidPath
-Input is a triangle (which is a binary tree) input below where you need to find the *maximum sum of
-the numbers per the given rules* below:
+Input is a triangle (which is a binary tree) input below where you need to find the **maximum sum of
+the numbers per the given rules** below:
 1. You will start from the top and move downwards to an adjacent number as in below.
 2. You are only allowed to walk downwards and diagonally.
 3. You should walk over the numbers as evens and odds subsequently. Suppose that you are on an even
