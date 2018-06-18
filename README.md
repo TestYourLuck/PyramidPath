@@ -11,7 +11,7 @@ Odd -> even -> odd -> even …
 Your goal is to find the maximum sum if you walk the path. Assume that there is at least 1 valid path to
 the bottom. If there are multiple paths giving the same sum, you can choose any of them.
 
-Sample Input:
+Sample Input:<br>
 1<br>
 8 9<br>
 1 5 9<br>
