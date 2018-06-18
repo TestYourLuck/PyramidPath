@@ -7,7 +7,7 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.io.File;
+import java.net.URI;
 import java.net.URISyntaxException;
 
 public class LongestBinaryPathFinderTest {
@@ -21,55 +21,55 @@ public class LongestBinaryPathFinderTest {
 
     @Test
     public void shouldFindSimpleLongestPath() {
-        File input = resourceAsFile("simpleInput.txt");
+        URI inputPath = resourceAsURI("simpleInput.txt");
 
-        long result = pathFinder.calculateLongestPath(input);
+        long result = pathFinder.calculateLongestPath(inputPath);
 
         assertThat(result, equalTo(16L));
     }
 
     @Test
     public void shouldFindLongestPath() {
-        File input = resourceAsFile("questionTargetInput.txt");
+        URI inputPath = resourceAsURI("questionTargetInput.txt");
 
-        long result = pathFinder.calculateLongestPath(input);
+        long result = pathFinder.calculateLongestPath(inputPath);
 
         assertThat(result, equalTo(-1L)); // TODO update to real result
     }
 
     @Test(expected = PathFinderError.class)
     public void shouldFailParsingLetters() {
-        File input = resourceAsFile("incorrectInput.txt");
+        URI inputPath = resourceAsURI("incorrectInput.txt");
 
-        pathFinder.calculateLongestPath(input);
+        pathFinder.calculateLongestPath(inputPath);
     }
 
     @Test(expected = PathFinderError.class)
     public void shouldFailOnMissingNumber() {
-        File input = resourceAsFile("incompleteInput.txt");
+        URI inputPath = resourceAsURI("incompleteInput.txt");
 
-        pathFinder.calculateLongestPath(input);
+        pathFinder.calculateLongestPath(inputPath);
     }
 
     @Test(expected = PathFinderError.class)
     public void shouldFailOnExtraNumber() {
-        File input = resourceAsFile("extraInput.txt");
+        URI inputPath = resourceAsURI("extraInput.txt");
 
-        pathFinder.calculateLongestPath(input);
+        pathFinder.calculateLongestPath(inputPath);
     }
 
     @Test
     public void shouldNotFindLongestPath() {
-        File input = resourceAsFile("noPathInput.txt");
+        URI inputPath = resourceAsURI("noPathInput.txt");
 
-        long result = pathFinder.calculateLongestPath(input);
+        long result = pathFinder.calculateLongestPath(inputPath);
 
         assertThat(result, equalTo(-1L));
     }
 
-    private File resourceAsFile(String relativeFilePath) {
+    private URI resourceAsURI(String relativeFilePath) {
         try {
-            return new File(this.getClass().getClassLoader().getResource(relativeFilePath).toURI());
+            return this.getClass().getClassLoader().getResource(relativeFilePath).toURI();
         } catch (URISyntaxException e) {
             fail("Failed reading input file: " + relativeFilePath);
             return null;

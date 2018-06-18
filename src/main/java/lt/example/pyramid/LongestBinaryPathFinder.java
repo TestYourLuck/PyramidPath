@@ -1,6 +1,11 @@
 package lt.example.pyramid;
 
-import java.io.File;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.net.URI;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 /**
  * Utility class to calculate longest path over binary tree by given rules:
@@ -26,8 +31,19 @@ public class LongestBinaryPathFinder {
      * @return longest path over binary tree or -1 if there is no full path.
      * @throws PathFinderError on invalid input.
      */
-    public long calculateLongestPath(File input) {
-        return -1L;  // TODO implement
+    public long calculateLongestPath(URI inputPath) {
+        Path path = Paths.get(inputPath);
+        long lineNumber = 1;
+        long expectedNumbersInLine = 1;
+        try {
+            BufferedReader reader = Files.newBufferedReader(path);
+
+            reader.readLine();
+
+            return -1L;  // TODO implement
+        } catch (IOException e) {
+            throw new PathFinderError("Failed reading file: " + inputPath.getPath(), e);
+        }
     }
 
 }
