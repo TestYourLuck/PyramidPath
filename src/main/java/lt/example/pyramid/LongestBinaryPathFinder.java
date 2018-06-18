@@ -1,5 +1,7 @@
 package lt.example.pyramid;
 
+import java.io.File;
+
 /**
  * Utility class to calculate longest path over binary tree by given rules:
  * <ol>
@@ -23,7 +25,7 @@ public class LongestBinaryPathFinder {
      *
      * @return longes path over binary tree.
      */
-    public long calculateLongestPath() {
+    public long calculateLongestPath(File input) {
         return 0L;  // TODO implement
     }
 

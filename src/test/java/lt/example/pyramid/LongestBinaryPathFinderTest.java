@@ -25,6 +25,16 @@ public class LongestBinaryPathFinderTest {
     }
 
     @Test
+    public void shouldFailParsingLetters() {
+        fail("Not yet implemented");
+    }
+
+    @Test
+    public void shouldFailOnMissingNumber() {
+        fail("Not yet implemented");
+    }
+
+    @Test
     public void shouldNotFindLongestPath() {
         fail("Not yet implemented");
     }
