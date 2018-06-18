@@ -10,13 +10,13 @@ Odd -> even -> odd -> even …
 4. You must reach to the bottom of the pyramid.
 Your goal is to find the maximum sum if you walk the path. Assume that there is at least 1 valid path to
 the bottom. If there are multiple paths giving the same sum, you can choose any of them.
-
+<br>
 Sample Input:<br>
 1<br>
 8 9<br>
 1 5 9<br>
 4 5 2 3<br>
-
-Output:
-Max sum: 16
-Path: 1, 8, 5, 2
+<br>
+Output:<br>
+Max sum: 16<br>
+Path: 1, 8, 5, 2<br>
