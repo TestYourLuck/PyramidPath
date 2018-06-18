@@ -23,10 +23,11 @@ public class LongestBinaryPathFinder {
      * Calculates path from binary tree top, summing up downwards or downwards and to the right number.
      * Walks over the numbers as evens and odds subsequently.
      *
-     * @return longes path over binary tree.
+     * @return longest path over binary tree or -1 if there is no full path.
+     * @throws PathFinderError on invalid input.
      */
     public long calculateLongestPath(File input) {
-        return 0L;  // TODO implement
+        return -1L;  // TODO implement
     }
 
 }
