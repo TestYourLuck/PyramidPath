@@ -34,7 +34,7 @@ public class LongestBinaryPathFinderTest {
 
         long result = pathFinder.calculateLongestPath(inputPath);
 
-        assertThat(result, equalTo(-1L)); // TODO update to real result
+        assertThat(result, equalTo(8186L));
     }
 
     @Test(expected = PathFinderError.class)
